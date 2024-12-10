@@ -1,0 +1,74 @@
+this is the user.js file in the routes folder
+const fs = require("fs");
+const express = require("express");
+const router = express.Router();
+
+router.get("/register", (req, res) => {
+  fs.readFile("./models/database.json", "utf8", (err, data) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(data);
+      res.status(200).send(data);
+    }
+  });
+});
+
+router.post("/register", (req, res) => {
+  fs.readFile("./models/database.json", "utf8", (err, data) => {
+    const { name, email, password } = req.body;
+    var users = [];
+
+    if (data) {
+      users = JSON.parse(data);
+    }
+
+    const existingUser = users.find((user) => user.email === email);
+
+    if (existingUser) {
+      res.status(400).send("User already exist");
+    } else {
+      const newUser = { name, email, password };
+      users.push(newUser);
+      fs.writeFile("./models/database.json", JSON.stringify(users), (err) => {
+        if (err) {
+          res.status(400).send("Cannot create user!");
+        } else {
+          res.status(201).send("User created successfully!");
+        }
+      });
+    }
+  });
+});
+module.exports = router;
+
+
+and this is the server.js file
+
+const exp = require("constants");
+const express = require("express");
+const port = 5000;
+const fs = require("fs");
+const app = express();
+const useRouter = require("./routes/users");
+const bodyParser = require("body-parser");
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  next();
+});
+
+app.use("/api", useRouter);
+
+app.listen(port, () => {
+  console.log(`server starterd on port ${port}`);
+});
+
+
+and this is the react file , if the user exist it says that user already exist is not a valid json in the console and if the user exist then it says the same message but for the success

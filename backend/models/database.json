@@ -1,0 +1,23 @@
+[
+  {
+    "name": "ABDULLAHI HALILU",
+    "email": "ABDULLAHIHALILUMUAZ@GMAIL.COM",
+    "password": "MAIN PASSWORD",
+    "image": "image",
+    "bio": "SOFTWARE DEVELOPER"
+  },
+  {
+    "name": "nameone",
+    "email": "emailone@email.com",
+    "password": "passwordone",
+    "image": "image",
+    "bio": "bio"
+  },
+  {
+    "name": "nametwo",
+    "email": "emailtwo",
+    "password": "passwordtwo",
+    "image": "image",
+    "bio": "bio"
+  }
+]

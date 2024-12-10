@@ -1,0 +1,117 @@
+.signup-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  background-color: #f5f5f5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.signup-container .left-signup {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.signup-container .fake-text {
+  width: 50%;
+}
+
+.fake-text h3 {
+  color: blue;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.fake-text p {
+  font-family: Arial, "Franklin Gothic Medium", "Arial Narrow", "Lucida Sans",
+    "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva,
+    Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.signup-container .signup {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+.form {
+  width: 70%;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.185);
+  margin: 8px auto;
+  outline-color: rgba(0, 0, 255, 0.199);
+  box-sizing: border-box;
+  font-family: cursive;
+  font-size: 12px;
+}
+
+.form input[type="submit"] {
+  background-color: blue;
+  color: white;
+  font-family: cursive;
+}
+
+.form .forgotten-password,
+.create-account-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.create-account-button {
+  background-color: rgb(3, 167, 17);
+  width: 40%;
+  margin: 10px auto;
+  padding: 12px 35px;
+  border-radius: 5px;
+  color: white;
+  font-family: sans-serif;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 770px) {
+  .signup-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .signup-container .left-signup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+  }
+
+  .signup-container .signup {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}

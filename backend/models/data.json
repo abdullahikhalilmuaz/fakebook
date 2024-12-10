@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Abdullahi Halilu",
+    "email": "email@email.com",
+    "password": "password"
+  },
+  {
+    "name": "Abdullahi Halilu",
+    "email": "email@gmail.com",
+    "password": "password"
+  },
+  {
+    "name": "Spark 2",
+    "email": "abdullahikhalilmuaz@gmail.com",
+    "password": "password"
+  },
+  { "name": "another user", "email": "main@email.com", "password": "some pas" }
+]

@@ -1,0 +1,115 @@
+[
+  {
+    "id": 101,
+    "firstname": "student",
+    "lastname": "panel",
+    "email": "student@email.com",
+    "password": "password"
+  },
+  {
+    "id": "102",
+    "firstname": "Abdullahi",
+    "lastname": "Halilu",
+    "email": "abdullahikhalilmuaz@gmail.com",
+    "password": "legend of maisaje"
+  },
+  {
+    "id": "102",
+    "firstname": "Abdullahi",
+    "lastname": "Halilu",
+    "email": "abdullahikhalilmuaz@gmail.com",
+    "password": "legend of maisaje"
+  },
+  {
+    "id": "102",
+    "firstname": "Abdullahi",
+    "lastname": "Halilu",
+    "email": "abdullahikhalilmuaz@gmail.com",
+    "password": "legend of maisaje"
+  },
+  {
+    "id": "102",
+    "firstname": "Abdullahi",
+    "lastname": "Halilu",
+    "email": "abdullahikhalilmuaz@gmail.com",
+    "password": "legend of maisaje"
+  },
+  {
+    "id": "102",
+    "firstname": "Abdullahi",
+    "lastname": "Halilu",
+    "email": "abdullahikhalilmuaz@gmail.com",
+    "password": "legend of maisaje"
+  },
+  {
+    "id": "102",
+    "firstname": "Abdullahi",
+    "lastname": "Halilu",
+    "email": "abdullahikhalilmuaz@gmail.com",
+    "password": "legend of maisaje"
+  },
+  {
+    "id": "102",
+    "firstname": "Abdullahi",
+    "lastname": "Halilu",
+    "email": "abdullahikhalilmuaz@gmail.com",
+    "password": "legend of maisaje"
+  },
+  {
+    "id": "102",
+    "firstname": "Abdullahi",
+    "lastname": "Halilu",
+    "email": "abdullahikhalilmuaz@gmail.com",
+    "password": "legend of maisaje"
+  },
+  {
+    "id": "102",
+    "firstname": "Abdullahi",
+    "lastname": "Halilu",
+    "email": "abdullahikhalilmuaz@gmail.com",
+    "password": "legend of maisaje"
+  },
+  {
+    "id": "102",
+    "firstname": "Abdullahi",
+    "lastname": "Halilu",
+    "email": "abdullahikhalilmuaz@gmail.com",
+    "password": "legend of maisaje"
+  },
+  {
+    "id": "102",
+    "firstname": "Abdullahi",
+    "lastname": "Halilu",
+    "email": "abdullahikhalilmuaz@gmail.com",
+    "password": "legend of maisaje"
+  },
+  {
+    "id": "102",
+    "firstname": "Abdullahi",
+    "lastname": "Halilu",
+    "email": "abdullahikhalilmuaz@gmail.com",
+    "password": "legend of maisaje"
+  },
+  {},
+  {
+    "id": "1000",
+    "firstname": "Abdurrafi'u ",
+    "lastname": "Isah",
+    "email": "abdullahikhalilmuaz@gmail.com",
+    "password": "Password"
+  },
+  {
+    "id": "001",
+    "firstname": "First User",
+    "lastname": "Last User",
+    "email": "main@main.com",
+    "password": "userpass"
+  },
+  {
+    "id": "100",
+    "firstname": "muhammad",
+    "lastname": "halilu",
+    "email": "email@email.com",
+    "password": "pass"
+  }
+]
