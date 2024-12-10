@@ -18,7 +18,7 @@
   background-color: rgb(189, 186, 186);
   bottom: 0;
   box-sizing: border-box;
-  padding: 10px;
+  /* padding: 10px; */
   overflow: auto;
 }
 
@@ -131,5 +131,75 @@
   left: 60%;
   right: 0;
   bottom: 0;
-  background-color: purple;
+  background-color: white;
+  overflow: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.side-two .header {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(26, 25, 25);
+}
+.side-two::-webkit-scrollbar {
+  display: none;
+}
+
+/* styling the friend index container */
+
+.friend-index {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.profile-image-container {
+  width: 25%;
+  border-top-right-radius: none;
+  border-bottom-right-radius: none;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  height: 100%;
+}
+
+.profile-image-container .img {
+  width: 60%;
+  height: 90%;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 5px auto;
+}
+
+.profile-actions-container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 10px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.profile-actions-container .profile-details {
+  padding: 10px;
+  box-sizing: border-box;
+  margin-right: 10px;
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.profile-actions-container button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  background-color: blue;
+  color: white;
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/header.css";
-export default function Header({ setSearch }) {
+export default function Header({ setSearch, setShowComponent }) {
   function handleLogout() {
     const delUser = localStorage.removeItem("data");
     localStorage.clear();
@@ -10,6 +10,22 @@ export default function Header({ setSearch }) {
 
   function handleMenu() {
     document.querySelector(".navs").classList.toggle("active");
+  }
+
+  function showNewsFeeds() {
+    setShowComponent("newsfeeds");
+  }
+
+  function showPosts() {
+    setShowComponent("posts");
+  }
+
+  function showMessages() {
+    setShowComponent("message");
+  }
+
+  function showFriends() {
+    setShowComponent("friends");
   }
   return (
     <div className="header">
@@ -32,15 +48,18 @@ export default function Header({ setSearch }) {
           </li>
 
           <li>
-            <Link to="/friends">Friends</Link>
+            <Link onClick={showFriends}>Friends</Link>
           </li>
 
           <li>
-            <Link to="/message">Message</Link>
+            <Link onClick={showMessages}>Message</Link>
           </li>
 
           <li>
-            <Link to="/feeds">Feeds</Link>
+            <Link onClick={showPosts}>Posts</Link>
+          </li>
+          <li>
+            <Link onClick={showNewsFeeds}>Feeds</Link>
           </li>
         </ul>
       </div>
