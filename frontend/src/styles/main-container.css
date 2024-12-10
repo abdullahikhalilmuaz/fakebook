@@ -1,0 +1,135 @@
+.main-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.side-one {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  right: 40%;
+  background-color: rgb(189, 186, 186);
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 10px;
+  overflow: auto;
+}
+
+.side-one::-webkit-scrollbar {
+  display: none;
+}
+
+.profile-bio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 350px;
+  background-color: white;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  box-sizing: border-box;
+}
+.cover-photo {
+  width: 100%;
+  height: 40%;
+  background-color: gray;
+}
+
+.bio-navs {
+  width: 100%;
+  height: 20%;
+  background-color: white;
+}
+
+.bio-navs .profile-image {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  padding: 5px;
+  box-sizing: border-box;
+  top: 25px;
+  border-radius: 50%;
+  left: 50px;
+  background-color: white;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.profile-image .image {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background-color: white;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 60%;
+  padding: 50px 50px 0 50px;
+  box-sizing: border-box;
+  margin-top: -66px;
+}
+
+.bio-desc {
+  width: 100%;
+  height: 60%;
+  margin: 10px 0;
+}
+
+.bio-desc h3 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.bio-desc p {
+  font-family: "Times New Roman", Times, serif;
+}
+.bio-edit {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-top: 1px solid rgb(209, 205, 205);
+  height: 40%;
+  margin-top: -10px;
+  align-items: center;
+}
+
+.bio-edit button {
+  width: 40%;
+  margin: 0px auto;
+  padding: 10px;
+}
+
+.bio-edit button:first-of-type {
+  background-color: blue;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  font-weight: bolder;
+}
+
+.bio-edit button {
+  border: none;
+  cursor: pointer;
+  background-color: gray;
+  font-weight: bolder;
+  border-radius: 3px;
+}
+.bio-navs .navs-links a {
+  text-decoration: none;
+}
+.side-two {
+  position: absolute;
+  top: 0;
+  left: 60%;
+  right: 0;
+  bottom: 0;
+  background-color: purple;
+}

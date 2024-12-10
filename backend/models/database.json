@@ -1,17 +1,17 @@
 [
   {
-    "name": "ABDULLAHI HALILU",
+    "name": "Abdullahi Halilu",
     "email": "ABDULLAHIHALILUMUAZ@GMAIL.COM",
     "password": "MAIN PASSWORD",
     "image": "image",
-    "bio": "SOFTWARE DEVELOPER"
+    "bio": "I am a Front-end Software Developer, Using ReactJs, NodeJs, and ExpressJs"
   },
   {
-    "name": "nameone",
+    "name": "Name One",
     "email": "emailone@email.com",
     "password": "passwordone",
     "image": "image",
-    "bio": "bio"
+    "bio": "The true definition of a leader, the iron, A frontend software developer!"
   },
   {
     "name": "nametwo",

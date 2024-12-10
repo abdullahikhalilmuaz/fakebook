@@ -1,19 +1,23 @@
-import { useEffect, useState } from "react";
+import { useDeferredValue, useEffect, useState } from "react";
 // import Sign from "../components/Sign";
 import "../styles/login.css";
 const url = "http://localhost:5000/api/login";
 export default function Signup({ setUserSchema }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [main, setMain] = useState();
-  const [message, setMessage] = useState("");
-
+  const [det, setDet] = useState([]);
+  const [userData, setUserData] = useState([]);
+  const [docs, setDocs] = useState([]);
   async function handleSubmit(e) {
     e.preventDefault();
+    const formData = {
+      email: email,
+      password: password,
+    };
     const res = await fetch(url, {
-      method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify(formData),
+      method: "POST",
     });
     const data = await res.json();
     const details = {
@@ -22,10 +26,39 @@ export default function Signup({ setUserSchema }) {
       bio: data[2],
       image: data[3],
     };
-    localStorage.setItem("data", JSON.stringify(details));
-    const getDetails = JSON.parse(localStorage.getItem("data"));
-    console.log(getDetails);
+
+    if (data.message === details) {
+      console.log("yes");
+    }
+    setDet(details);
+    handle(data); // Call handle without arguments
   }
+
+  function handle(data) {
+    const userCredentials = {
+      name: det.name,
+      email: det.email,
+      bio: det.bio,
+      image: det.image,
+    };
+
+    if (data.message === "Invalid Email or Password") {
+      localStorage.clear();
+    } else if (data) {
+      localStorage.setItem("userCredentials", JSON.stringify(data));
+      console.log(localStorage);
+      window.location.href = "/mainaccount";
+    }
+    // Save data to localStorage
+  }
+
+  useEffect(() => {
+    const storedData = localStorage.getItem("userCredentials");
+    if (storedData) {
+      setUserData(JSON.parse(storedData));
+    }
+  }, []);
+
   return (
     <div className="signup-container">
       <div className="left-signup">
@@ -43,7 +76,6 @@ export default function Signup({ setUserSchema }) {
               type="email"
               placeholder="Email Address"
               value={email}
-              required
               onChange={(e) => setEmail(e.target.value)}
             />
           </label>
@@ -52,7 +84,6 @@ export default function Signup({ setUserSchema }) {
               type="password"
               placeholder="Password"
               value={password}
-              required
               onChange={(e) => setPassword(e.target.value)}
             />
           </label>
@@ -71,7 +102,6 @@ export default function Signup({ setUserSchema }) {
           </label>
         </form>
       </div>
-      {/* {console.log(main)} */}
     </div>
   );
 }

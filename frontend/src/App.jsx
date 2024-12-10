@@ -6,20 +6,20 @@ import Notification from "./pages/Notification";
 import Friends from "./pages/Friends";
 import NewsFeeds from "./pages/NewsFeeds";
 import styles from "./app.css";
-import Home from "./pages/home/Home";
-import Main from "./pages/home/Main";
+// import Home from "./pages/home/ "
+// import Main from "./pages/home/Main";
 import FriendsRequest from "./pages/FriendRequest";
 import MainPage from "./pages/home/MainPage";
+import MainAccount from "./pages/home/MainAccount";
 
 export default function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Main />}></Route>
-        <Route path="/main" element={<Main/>}></Route>
-        <Route path="/mainpage" element={<MainPage/>}></Route>
-        <Route path="/home" element={<Home />}></Route>
-        <Route path="/login" element={<Login />}></Route>
+        <Route path="/mainaccount" element={<MainAccount />}></Route>
+        <Route path="/" element={<Login />}></Route>
+        <Route path="/mainaccount" element={<MainAccount />}></Route>
+        <Route path="/Login" element={<Login />}></Route>
         <Route path="/userprofile" element={<UserProfile />}></Route>
         <Route path="/notification" element={<Notification />}></Route>
         <Route path="/Friends" element={<Friends />}></Route>
