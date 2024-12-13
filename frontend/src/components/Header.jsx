@@ -16,8 +16,8 @@ export default function Header({ setSearch, setShowComponent }) {
     setShowComponent("newsfeeds");
   }
 
-  function showPosts() {
-    setShowComponent("posts");
+  function showPost() {
+    setShowComponent("post");
   }
 
   function showMessages() {
@@ -56,7 +56,7 @@ export default function Header({ setSearch, setShowComponent }) {
           </li>
 
           <li>
-            <Link onClick={showPosts}>Posts</Link>
+            <Link onClick={showPost}>Posts</Link>
           </li>
           <li>
             <Link onClick={showNewsFeeds}>Feeds</Link>

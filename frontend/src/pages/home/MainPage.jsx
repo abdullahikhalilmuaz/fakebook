@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import "../../styles/main-container.css";
 import { Link } from "react-router-dom";
-import Posts from "../../components/Posts";
+import Post from "../../components/Posts";
 import NewsFeeds from "../NewsFeeds";
 import Message from "../Message";
 export default function MainPage() {
@@ -25,8 +25,8 @@ export default function MainPage() {
         <div className="side-one">
           {showComponent === "newsfeeds" ? (
             <NewsFeeds />
-          ) : showComponent === "posts" ? (
-            <Posts />
+          ) : showComponent === "post" ? (
+            <Post />
           ) : (
             <div className="profile-bio">
               <div className="cover-photo"></div>

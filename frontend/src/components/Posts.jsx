@@ -1,8 +1,9 @@
 import "../styles/posts.css";
+import Posting from "./../pages/Posting";
 export default function Posts() {
   return (
     <div className="posts">
-      <h3>Posts</h3>
+      <Posting />
     </div>
   );
 }
