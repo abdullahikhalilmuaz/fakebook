@@ -1,5 +1,4 @@
 import { useDeferredValue, useEffect, useState } from "react";
-// import Sign from "../components/Sign";
 import "../styles/login.css";
 const url = "http://localhost:5000/api/login";
 export default function Signup({ setUserSchema }) {
@@ -27,9 +26,7 @@ export default function Signup({ setUserSchema }) {
       image: data[3],
     };
 
-    if (data.message === details) {
-      console.log("yes");
-    }
+  
     setDet(details);
     handle(data); // Call handle without arguments
   }
@@ -46,7 +43,6 @@ export default function Signup({ setUserSchema }) {
       localStorage.clear();
     } else if (data) {
       localStorage.setItem("userCredentials", JSON.stringify(data));
-      console.log(localStorage);
       window.location.href = "/mainaccount";
     }
     // Save data to localStorage

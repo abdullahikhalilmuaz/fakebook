@@ -1,0 +1,158 @@
+this is the main component
+import { Component, useEffect, useState } from "react";
+import Header from "../../components/Header";
+import "../../styles/main-container.css";
+import Profile from "../../components/Profile";
+import Friends from "../../components/Friends";
+import Home from "../../components/Home";
+import Messages from "../../components/Messages";
+
+export default function MainPage() {
+  const [mainUser, setMainUser] = useState([]);
+  const [search, setSearch] = useState("");
+  const [mobile, setMobile] = useState(650);
+  const [tablet, setTablet] = useState(770);
+  const [desktop, setDesktop] = useState(990);
+  const [showComponent, setShowComponent] = useState("");
+  const [showOtherSide, setShowOtherSide] = useState("");
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("userCredentials"));
+    setMainUser(user);
+  }, []);
+
+  if (screen.width <= mobile) {
+    console.log("mobile");
+  } else if (screen.width >= desktop) {
+    console.log("desktop");
+  } else if (screen.width <= tablet) {
+    console.log("tablet");
+  }
+  return (
+    <div>
+      <Header
+        search={search}
+        setSearch={setSearch}
+        setShowComponent={setShowComponent}
+        setShowOtherSide={setShowOtherSide}
+        showOtherSide={showOtherSide}
+      />
+
+      <div className="main-container">
+        <div className="side-one">
+          <Home />
+          {screen.width <= mobile && showComponent === "friends" ? (
+            <Friends />
+          ) : (
+            ""
+          )}
+          {screen.width <= mobile && showComponent === "messages" ? (
+            <Messages />
+          ) : (
+            ""
+          )}
+          {screen.width <= mobile && showComponent === "messages" ? (
+            <Messages />
+          ) : (
+            ""
+          )}
+        </div>
+        <div className="side-two">
+          {showOtherSide === "message" ? (
+            <Messages />
+          ) : showOtherSide === "friends" ? (
+            <Friends />
+          ) : null}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+i want the default one to display is the message Component, and if the button in the header friends link is clicked in the heaeder then it will remove the message component and then render the message Component, here is the header component here :
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import "../styles/header.css";
+export default function Header({
+  setSearch,
+  setShowComponent,
+  showOtherSide,
+  setShowOtherSide,
+}) {
+  function handleLogout() {
+    const delUser = localStorage.removeItem("data");
+    localStorage.clear();
+    window.location.href = "/";
+  }
+
+  function handleStuff() {
+    setShowOtherSide(showOtherSide === "message" ? "friends" : "message");
+  }
+
+  function handleMenu() {
+    document.querySelector(".navs").classList.toggle("active");
+  }
+
+  function showFriends() {
+    setShowComponent("friends");
+  }
+
+  function showMessages() {
+    setShowComponent("messages");
+  }
+  return (
+    <div className="header">
+      <div className="title">
+        <h4>fakebook</h4>
+        <div className="search">
+          <input
+            type="search"
+            placeholder="Search..."
+            className="search"
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
+      </div>
+
+      <div className="navs">
+        <ul>
+          <li>
+            <Link to="/mainaccount">Home</Link>
+          </li>
+
+          <li>
+            <Link onClick={handleStuff}>Friends</Link>
+          </li>
+
+          <li>
+            <Link onClick={handleStuff}>Message</Link>
+          </li>
+
+          <li>
+            <Link>Posts</Link>
+          </li>
+          <li>
+            <Link>Feeds</Link>
+          </li>
+        </ul>
+      </div>
+
+      <div className="menu" onClick={handleMenu}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  );
+}
+
+ and here is the friends Component
+
+ export default function Friends() {
+    return <div>This is the friends component</div>;
+  }
+  and here is the message Component
+  export default function Message() {
+    return <div>This is the friends message</div>;
+  }
+    

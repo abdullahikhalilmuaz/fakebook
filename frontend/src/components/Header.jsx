@@ -1,32 +1,42 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/header.css";
-export default function Header({ setSearch, setShowComponent }) {
+export default function Header({
+  setSearch,
+  setShowComponent,
+  showOtherSide,
+  setShowOtherSide,
+}) {
   function handleLogout() {
     const delUser = localStorage.removeItem("data");
     localStorage.clear();
     window.location.href = "/";
   }
 
+  function handleStuff(link) {
+    if (link === "friends") {
+      setShowOtherSide("friends");
+      setShowComponent("friends");
+    } else if (link === "message") {
+      setShowOtherSide("message");
+      setShowComponent("message");
+    } else if (link === "home") {
+      setShowComponent("home");
+    } else if (link === "post") {
+      setShowComponent("post");
+    } else if (link === "feeds") {
+      setShowComponent("feeds");
+    }
+  }
+
   function handleMenu() {
     document.querySelector(".navs").classList.toggle("active");
-  }
-
-  function showNewsFeeds() {
-    setShowComponent("newsfeeds");
-  }
-
-  function showPost() {
-    setShowComponent("post");
-  }
-
-  function showMessages() {
-    setShowComponent("message");
   }
 
   function showFriends() {
     setShowComponent("friends");
   }
+
   return (
     <div className="header">
       <div className="title">
@@ -44,22 +54,21 @@ export default function Header({ setSearch, setShowComponent }) {
       <div className="navs">
         <ul>
           <li>
-            <Link to="/mainaccount">Home</Link>
+            <Link onClick={() => handleStuff("home")}>Home</Link>
           </li>
 
           <li>
-            <Link onClick={showFriends}>Friends</Link>
+            <Link onClick={() => handleStuff("friends")}>Friends</Link>
+          </li>
+          <li>
+            <Link onClick={() => handleStuff("message")}>Message</Link>
           </li>
 
           <li>
-            <Link onClick={showMessages}>Message</Link>
-          </li>
-
-          <li>
-            <Link onClick={showPost}>Posts</Link>
+            <Link onClick={() => handleStuff("post")}>Posts</Link>
           </li>
           <li>
-            <Link onClick={showNewsFeeds}>Feeds</Link>
+            <Link onClick={() => handleStuff("feeds")}>Feeds</Link>
           </li>
         </ul>
       </div>
