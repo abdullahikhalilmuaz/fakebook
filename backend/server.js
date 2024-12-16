@@ -4,7 +4,7 @@ const app = express();
 const useRouter = require("./routes/users");
 const postRoutes = require("./routes/post");
 const bodyParser = require("body-parser");
-
+const messageRouter = require("./routes/messages");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -21,6 +21,8 @@ app.use((req, res, next) => {
 app.use("/api", useRouter);
 
 app.use("/api", postRoutes);
+
+app.use("/api", messageRouter);
 
 app.listen(port, () => {
   console.log(`server started on port ${port}`);
