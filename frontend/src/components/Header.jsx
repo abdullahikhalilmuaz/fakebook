@@ -10,7 +10,7 @@ export default function Header({
   function handleLogout() {
     const delUser = localStorage.removeItem("data");
     localStorage.clear();
-    window.location.href = "/";
+    window.location.reload();
   }
 
   function handleStuff(link) {
@@ -69,6 +69,9 @@ export default function Header({
           </li>
           <li>
             <Link onClick={() => handleStuff("feeds")}>Feeds</Link>
+          </li>
+          <li>
+            <Link onClick={handleLogout}>Logout</Link>
           </li>
         </ul>
       </div>
