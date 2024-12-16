@@ -1,50 +1,28 @@
 [
   {
-    "postTitle": "",
-    "postContent": ""
+    "id": "101",
+    "postTitle": "This is the title",
+    "postContent": "This is the first feed"
   },
   {
-    "postTitle": "",
-    "postContent": ""
+    "id": "102",
+    "postTitle": "this is the main title",
+    "postContent": "This is the main post feed, and the best feed of the day"
   },
   {
-    "postTitle": "",
-    "postContent": ""
+    "id": "103",
+    "postTitle": "Celebration",
+    "postContent": "Wow, amazing, this is to celebrate our new function working smoothly without any issue"
   },
   {
-    "postTitle": "",
-    "postContent": ""
+    "id": "104",
+    "postTitle": "The trail title",
+    "postContent": "This is the trial feed || post"
   },
   {
-    "postTitle": "",
-    "postContent": ""
-  },
-  {
-    "postTitle": "",
-    "postContent": ""
-  },
-  {
-    "postTitle": "",
-    "postContent": ""
-  },
-  {
-    "postTitle": "",
-    "postContent": ""
-  },
-  {
-    "postTitle": "",
-    "postContent": ""
-  },
-  {
-    "postTitle": "",
-    "postContent": ""
-  },
-  {
-    "postTitle": "",
-    "postContent": ""
-  },
-  {
-    "postTitle": "",
-    "postContent": ""
+    "id": "105",
+    "userName": "Name One",
+    "postTitle": "The one and only title goes here and ends here",
+    "postContent": "Here is the main feed and this is the post of all the time"
   }
 ]

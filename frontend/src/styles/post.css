@@ -1,0 +1,36 @@
+.posts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  font-weight: 300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: white;
+  padding: 1px 20px;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 5px 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.posts button {
+  padding: 10px 30px;
+  border: none;
+  background-color: blue;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s ease-in-out;
+  border-radius: 3px;
+}
+
+.posts button:hover {
+  transform: scale(1.1);
+}
