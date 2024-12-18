@@ -39,6 +39,19 @@
   margin: 10px;
 }
 
+.bubbles-wrapper::-webkit-scrollbar {
+  width: 6px;
+  cursor: pointer;
+}
+
+.bubbles-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: blue;
+}
+
+.bubbles-wrapper::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
 .bubbles-wrapper .username {
   font-size: 12px;
   margin: 10px auto;
@@ -122,6 +135,6 @@
   outline: none;
   cursor: pointer;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */

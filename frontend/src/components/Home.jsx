@@ -1,12 +1,23 @@
 import "../styles/home.css";
 export default function Home() {
+  function handleUpload() {
+    const formId = document.getElementById("upload-image");
+    const file = document.createElement("input");
+    file.type = "file";
+    formId.appendChild(file);
+    file.click();
+  }
+
+  function handleImage() {}
   return (
     <div className="home">
       <div className="profile">
         <div className="profile-top"></div>
         <div className="profile-bottom">
           <div className="profile-image">
-            <div className="image"></div>
+            <div className="image">
+              <form id="upload-image"></form>
+            </div>
           </div>
           <div className="bio">
             <p>
