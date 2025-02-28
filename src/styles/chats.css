@@ -1,0 +1,81 @@
+.chats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.chats::-webkit-scrollbar {
+  display: none;
+}
+
+.chats .chats-header {
+  color: rgb(43, 39, 39);
+  font-size: 17px;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-top: 15px;
+}
+
+.chats .chat-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  width: 95%;
+  height: 60px;
+  margin: 6px auto;
+  background-color: #f5f5f5;
+  font-size: 12px;
+  font-weight: bolder;
+  letter-spacing: 0.5px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.chat-details {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 80%;;
+  border-radius: 3px;
+}
+
+.chat-details .chat-profile-image {
+  width: 13%;
+  height: 90%;
+  margin: auto;
+  border-radius: 50%;
+}
+.chat-details .chat-profile-name {
+  display: flex;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  width: 70%;
+  align-items: center;
+  overflow: auto;
+}
+
+.chat-date-members {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: last baseline;
+  width: 30%;
+  height: 95%;
+}
+
+.chat-date-members span:first-of-type {
+  display: block;
+  padding: 6px 8px;
+  border-radius: 50%;
+  color: white;
+  margin-left: 100px;
+  background-color: red;
+}

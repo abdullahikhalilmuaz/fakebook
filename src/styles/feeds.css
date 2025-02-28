@@ -1,0 +1,261 @@
+.container {
+  border-radius: 10px;
+}
+
+.post-header {
+  border-radius: 10px;
+}
+
+/* Form */
+.form-container {
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 12px;
+  margin: 0px auto;
+  outline: none;
+  resize: none;
+}
+
+button {
+  background: rgba(0, 60, 255, 0.808);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  margin: 10px auto;
+}
+
+button:hover {
+  background: rgba(25, 79, 255, 0.808);
+}
+
+.feeds-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+}
+
+.feeds-wrapper .feeds-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 30px;
+  background-color: #f5f5f5;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgb(231, 228, 228);
+}
+
+.feeds-header span {
+  margin: 0px 10px;
+  padding: 6px 10px;
+  font-size: 11px;
+  border-radius: 3px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  cursor: pointer;
+}
+
+.feeds-header span:hover {
+  background-color: rgb(202, 198, 198);
+}
+.feeds-wrapper .feeds-header span {
+  font-weight: bolder;
+}
+
+.feeds-posts-container,
+.feeds-feeds-container {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.feeds-posts-container::-webkit-scrollbar,
+.feeds-feeds-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.feeds-title {
+  font-family: "Trebuchet MS";
+  color: rgb(65, 61, 61);
+  text-align: center;
+}
+.feeds-posts-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 60, 255, 0.808);
+  border-radius: 20px;
+}
+
+/* New Post Styles */
+.new-post {
+  display: none;
+  flex-direction: column;
+  width: 95%;
+  height: 250px;
+  border-radius: 3px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  box-sizing: border-box;
+  margin: 10px auto;
+}
+
+.new-post.active {
+  display: flex;
+}
+
+.new-post span {
+  font-size: 15px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  min-height: 150px;
+  max-height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+
+.post .post-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.post .post-header .user-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.post .post-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  font-family: "Times New Roman", Times, serif;
+  background-color: red;
+}
+
+.post-content .post-image {
+  width: 90%;
+  min-height: 200px;
+  max-height: 200px;
+  margin: 10px auto;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+.post-text {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: -100px;
+  width: 100%;
+  min-height: 100px;
+  max-height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: justify;
+  justify-content: center;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  color: rgb(43, 41, 41);
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+
+.post-content .post-text::first-letter {
+  font-size: 20px;
+  color: rgba(0, 60, 255, 0.808);
+}
+
+.post-user-reactions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  margin-top: 100px;
+  align-items: center;
+  padding: 0px 30px;
+  box-sizing: border-box;
+}
+
+.post-user-reactions a {
+  text-decoration: none;
+  border: 1px solid rgba(0, 60, 255, 0.808);
+  padding: 8px 30px;
+  border-radius: 30px;
+  color: rgba(0, 60, 255, 0.808);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.post-user-reactions a:hover {
+  background-color: rgba(0, 60, 255, 0.808);
+  color: white;
+  border: none;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.new-post .file-upload {
+  margin: 10px 0 0px 0px;
+}
+
+.new-post button {
+  background-color: rgba(0, 60, 255, 0.808);
+  border: none;
+  width: 60%;
+  color: white;
+  cursor: pointer;
+}
+
+.comments-section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* background-color: black; */
+}
+.new-post span {
+  margin: 10px 0;
+  font-size: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 770px) {
+  .feeds-wrapper {
+    width: 100%;
+  }
+}

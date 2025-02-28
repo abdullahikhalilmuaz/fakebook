@@ -1,0 +1,126 @@
+.signup-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 40%;
+  height: 100%;
+  color: red;
+}
+
+.left h3 {
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: rgba(0, 60, 255, 0.808);
+
+  margin: -100px 0 0 30px;
+}
+.left span {
+  font-size: 12px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(24, 23, 23);
+  font-weight: 500;
+  margin-left: 30px;
+}
+
+.right {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.right .form-container {
+  background-color: #f5f5f5;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  width: 50%;
+  height: 88%;
+  margin: 20px auto;
+  align-items: center;
+  padding: 20px 0px 0px 0px;
+  border-radius: 5px;
+}
+
+.right form input,
+.signup-button {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  padding: 10px 20px;
+  margin: 10px auto;
+  outline: none;
+  box-sizing: border-box;
+  justify-content: center;
+  border-radius: 3px;
+  outline-color: orange;
+  border: 1px solid #e6e2e2;
+}
+
+.right form .error {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 100px;
+  box-sizing: border-box;
+  justify-content: center;
+  border-radius: 3px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+.right form .signup-button {
+  background-color: rgba(0, 60, 255, 0.808);
+
+  color: white;
+  border: none;
+}
+
+.right .form-container .login-button {
+  margin-top: -10px;
+  background-color: green;
+  color: white;
+}
+
+@media only screen and (max-width: 990px) {
+  .signup-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .right {
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+  }
+
+  .right .form-container {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+  }
+
+  .right .form-container .login-button {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    left: 0;
+    margin: 0px auto;
+    width: 80%;
+  }
+}

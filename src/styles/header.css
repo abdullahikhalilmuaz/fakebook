@@ -1,0 +1,131 @@
+.header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  padding: 0px 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* width: 60%; */
+  height: 50px;
+  background-color: rgba(0, 60, 255, 0.808);
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  justify-content: space-between;
+}
+
+.header .title-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 40%;
+  height: 100%;
+}
+
+.title-search h3 {
+  color: rgba(0, 60, 255, 0.808);
+  background-color: white;
+  padding: 1px 6px 0px 10px;
+  border-radius: 3px;
+  font-size: 18px;
+  text-align: right;
+}
+
+.title-search input {
+  width: 94%;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  margin: 0px 20px;
+}
+
+.header .profile {
+  display: flex;
+  flex-direction: row;
+  width: 50px;
+  max-width: 100px;
+  height: 30px;
+}
+
+.header .profile .profile-image {
+  width: 60%;
+  height: 100%;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+}
+
+.profile .profile-name {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  text-align: center;
+  color: black;
+}
+
+.header .nav {
+  margin-left: 100px;
+}
+.header .nav span {
+  font-size: 11px;
+  margin: 0px 10px;
+}
+@media only screen and (max-width: 650px) {
+  .header {
+    justify-content: space-between;
+  }
+  .nav {
+    position: absolute;
+    display: flex;
+    top: 50px;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    overflow: auto;
+  }
+
+  .nav span {
+    background-color: rgba(0, 60, 255, 0.808);
+    padding: 4px 10px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+
+  .nav span:hover {
+    transform: scale(1.1);
+  }
+  .header .nav {
+    margin-left: 0;
+  }
+  .nav span {
+    margin: 0px 5px;
+    font-size: 12px;
+  }
+
+  .title-search input {
+    margin: 0px 10px;
+  }
+
+  .profile .profile-name {
+    /* display: none; */
+    /* margin-left: 10px; */
+  }
+
+  .profile {
+    /* margin: 0px 10px 0px 0px; */
+  }
+
+  .logout-button {
+    margin-left: 100px;
+  }
+}
