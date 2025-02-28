@@ -14,7 +14,7 @@ export default function Chats({
       if (selectedUser && loggedInUserId) {
         try {
           const response = await fetch(
-            `http://localhost:8000/messages/history/${loggedInUserId}/${selectedUser.id}`
+            `https://fakebook-server.onrender.com/messages/history/${loggedInUserId}/${selectedUser.id}`
           );
           const data = await response.json();
           setMessages(data);

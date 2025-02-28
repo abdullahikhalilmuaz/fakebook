@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../styles/login.css";
-const url = "http://localhost:8000/register/user/login";
+const url = "https://fakebook-server.onrender.com/register/user/login";
 export default function Login({ setSignup, setLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

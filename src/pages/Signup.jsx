@@ -13,11 +13,20 @@ export default function Signup({ setSignup }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:8000/register/user/signup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ firstname, lastname, username, email, password }),
-    });
+    const res = await fetch(
+      "https://fakebook-server.onrender.com/register/user/signup",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          firstname,
+          lastname,
+          username,
+          email,
+          password,
+        }),
+      }
+    );
 
     const data = await res.json();
     setMessage(data.message);

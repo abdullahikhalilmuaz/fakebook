@@ -18,7 +18,7 @@ export default function Messages({
       if (selectedUser && loggedInUserId) {
         try {
           const response = await fetch(
-            `http://localhost:8000/messages/history/${loggedInUserId}/${selectedUser.id}`
+            `https://fakebook-server.onrender.com/messages/history/${loggedInUserId}/${selectedUser.id}`
           );
           const data = await response.json();
           setChatHistory(data);
@@ -37,7 +37,7 @@ export default function Messages({
   const handleSendMessage = async () => {
     if (message.trim()) {
       try {
-        const response = await fetch("http://localhost:8000/messages/send", {
+        const response = await fetch("https://fakebook-server.onrender.com/messages/send", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

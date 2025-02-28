@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import "../styles/feeds.css";
 
-const postURL = "http://localhost:8000/posts/newPost";
-const fetchPostsURL = "http://localhost:8000/posts/newPost"; // Endpoint to fetch posts
+const postURL = "https://fakebook-server.onrender.com/posts/newPost";
+const fetchPostsURL = "https://fakebook-server.onrender.com/posts/newPost"; // Endpoint to fetch posts
 
 export default function Feeds() {
   const [showFeeds, setShowFeeds] = useState("");
@@ -60,7 +60,7 @@ export default function Feeds() {
     }
     try {
       const response = await fetch(
-        `http://localhost:8000/posts/${postId}/like`,
+        `https://fakebook-server.onrender.com/posts/${postId}/like`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -88,7 +88,7 @@ export default function Feeds() {
     }
     try {
       const response = await fetch(
-        `http://localhost:8000/posts/${postId}/comments`,
+        `https://fakebook-server.onrender.com/posts/${postId}/comments`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

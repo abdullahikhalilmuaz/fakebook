@@ -7,7 +7,7 @@ export default function FriendsRequest({ setSelectedUser }) {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch("http://localhost:8000/users");
+        const response = await fetch("https://fakebook-server.onrender.com/users");
 
         if (!response.ok) {
           throw new Error("Failed to fetch users");

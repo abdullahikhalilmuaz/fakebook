@@ -1,5 +1,5 @@
 {
-  "proxy": "http://localhost:8000",
+  "proxy": "https://fakebook-server.onrender.com",
   "name": "journal-frontend",
   "private": true,
   "version": "0.0.0",
