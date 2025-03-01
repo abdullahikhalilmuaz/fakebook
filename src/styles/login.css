@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+.login-container::-webkit-scrollbar {
+  display: none;
+}
+
 .login-left {
   display: flex;
   flex-direction: column;
@@ -116,6 +120,6 @@
     margin: 0px;
   }
   .login-right form input {
-    width: 100%;
+    width: 80%;
   }
 }
