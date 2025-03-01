@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "../styles/Home.css";
 import Signup from "./Signup";
 import Login from "./Login";
 import Messages from "../components/Messages";
 import Feeds from "../components/Feeds";
 import Friends from "../components/Friends";
+import "../styles/home.css";
 
 export default function Home({
   message,
